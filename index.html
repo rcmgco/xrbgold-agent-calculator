@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XRB Gold Agent Bonus Calculator</title>
+    <title>XRB Gold Marketing Agent Bonus Calculator</title>
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -85,8 +85,8 @@ s0.parentNode.insertBefore(s1,s0);
         // --- Language Text Library ---
         const translations = {
             en: {
-                title: "XRB Gold Agent Bonus Calculator",
-                description: "This tool calculates the bonus for agents based on the size of an XRBG token transaction. Use the slider or input field to see the potential bonus in real-time. Contact support@xrb.gold for more information.",
+                title: "XRB Gold Marketing Agent Bonus Calculator",
+                description: "This tool calculates the bonus for marketing agents based on the size of an XRBG token transaction. Use the slider or input field to see the potential bonus in real-time. Contact support@xrb.gold for more information.",
                 byUsd: "By USD Amount",
                 byWeight: "By Gold Weight",
                 transactionAmount: "Transaction Amount (USD)",
@@ -98,27 +98,28 @@ s0.parentNode.insertBefore(s1,s0);
                 perTon: "per ton",
                 livePriceUpdated: "Live price updated:",
                 couldNotFetch: "Could not fetch live price. Please enter manually.",
-                agentBonusSummary: "Agent Bonus Summary",
-                copyAgentSummary: "Copy Agent Summary",
+                promoNotice: "Promotional APY: Earn 60% APY on a 12-month term for transactions from $1M to $10M. Earn 120% APY on a 12-month term for transactions from $10M to $100M. Standard rates apply otherwise.",
+                agentBonusSummary: "Marketing Agent Bonus Summary",
+                copyAgentSummary: "Copy Marketing Agent Summary",
                 copied: "Copied!",
-                initialAgentBonus: "Initial Agent Bonus",
+                initialAgentBonus: "Initial Marketing Agent Bonus",
                 totalBonusUsd: "Total Bonus (USD)",
                 totalNetBonus: "Total Net Bonus",
                 vsClientPurchase: "vs. Client Purchase of",
                 clientPurchase: "Client Purchase",
-                agentBonus: "Agent Bonus",
+                agentBonus: "Marketing Agent Bonus",
                 initialBonusBreakdown: "Initial Bonus Calculation Breakdown",
                 tier: "Tier",
                 rate: "Rate",
                 applicableAmount: "Applicable Amount",
                 bonusEarned: "Bonus Earned",
-                agentStakingBonusTitle: "Agent's Potential Staking Bonus",
-                agentStakingBonusDesc: "This additional bonus is paid to the agent upfront if the client agrees to a holding term. The agent's earned XRBG is redeemable upon completion of the client's term.",
+                agentStakingBonusTitle: "Marketing Agent's Potential Staking Bonus",
+                agentStakingBonusDesc: "This additional bonus is paid to the marketing agent upfront if the client agrees to a holding term. The marketing agent's earned XRBG is redeemable upon completion of the client's term.",
                 term: "Term",
                 clientApy: "Client APY",
-                agentEarnsXrbg: "Agent Earns (XRBG)*",
-                agentEarnsUsd: "Agent Earns (USD)*",
-                agentStakingDisclaimer: "*Calculated from the client's APY yield at the agent's net bonus percentage.",
+                agentEarnsXrbg: "Marketing Agent Earns (XRBG)*",
+                agentEarnsUsd: "Marketing Agent Earns (USD)*",
+                agentStakingDisclaimer: "*Calculated from the client's APY yield at the marketing agent's net bonus percentage.",
                 clientSummaryTitle: "Client Transaction Summary",
                 copyClientSummary: "Copy Client Summary",
                 clientPurchaseAmount: "Client's XRBG Purchase Amount (USD)",
@@ -135,15 +136,15 @@ s0.parentNode.insertBefore(s1,s0);
                 totalXrbg: "Total XRBG",
                 totalValue: "Total Value*",
                 clientStakingDisclaimer: "*USD value is an estimate based on the current gold price and does not reflect future price changes.",
-                footerDisclaimer: "Disclaimer: This site and the calculator are for informational purposes only and do not constitute a solicitation for investment.",
-                footerNotice: "Notice to Agents: XRBG tokens are not offered at a discount. Instead, a bonus percentage of the amount sold in USD or XRBG is credited to the agent, paid as a marketing fee for a successful sale originating from that agent. The buyer receives the full spot amount of XRBG from the seller. The seller or seller's agent will submit payment to only one designated agent per transaction. If multiple agents are involved on the buyer's side, they must assign a single paymaster to receive the bonus payment. That paymaster is solely responsible for the subsequent distribution of funds to all other participating agents.",
+                footerDisclaimer: "Disclaimer: This site and the calculator are for informational purposes only and do not constitute a solicitation for investment. Any APY offers listed are part of a promotional program, are temporary and can be lowered or canceled at any time at the discretion of XRB Gold.",
+                footerNotice: "Notice to Marketing Agents: XRBG tokens are not offered at a discount. Instead, a bonus percentage of the amount sold in USD or XRBG is credited to the marketing agent, paid as a marketing fee for a successful sale originating from that marketing agent. The buyer receives the full spot amount of XRBG from the seller. The seller or seller's marketing agent will submit payment to only one designated marketing agent per transaction. If multiple marketing agents are involved on the buyer's side, they must assign a single paymaster to receive the bonus payment. That paymaster is solely responsible for the subsequent distribution of funds to all other participating marketing agents.",
                 terms: "Terms & Conditions",
                 privacy: "Privacy Policy",
                 copyright: "© Legacy Vault Services S.T.C. B.V (Reg. No. 169064) / XRBG Trust (Reg. No. 169124) Curaçao Commercial Register / XRB DAO. All Rights Reserved."
             },
             es: {
-                title: "Calculadora de Bonos para Agentes de XRB Gold",
-                description: "Esta herramienta calcula el bono para agentes basado en el tamaño de una transacción de tokens XRBG. Use el control deslizante o el campo de entrada para ver el bono potencial en tiempo real. Contacte a support@xrb.gold para más información.",
+                title: "Calculadora de Bonos para Agentes de Marketing de XRB Gold",
+                description: "Esta herramienta calcula el bono para agentes de marketing basado en el tamaño de una transacción de tokens XRBG. Use el control deslizante o el campo de entrada para ver el bono potencial en tiempo real. Contacte a support@xrb.gold para más información.",
                 byUsd: "Por Monto en USD",
                 byWeight: "Por Peso de Oro",
                 transactionAmount: "Monto de la Transacción (USD)",
@@ -155,27 +156,28 @@ s0.parentNode.insertBefore(s1,s0);
                 perTon: "por tonelada",
                 livePriceUpdated: "Precio en vivo actualizado:",
                 couldNotFetch: "No se pudo obtener el precio en vivo. Por favor, ingrese manualmente.",
-                agentBonusSummary: "Resumen de Bonos del Agente",
-                copyAgentSummary: "Copiar Resumen del Agente",
+                promoNotice: "APY Promocional: Gane 60% APY en un plazo de 12 meses para transacciones de $1M a $10M. Gane 120% APY en un plazo de 12 meses para transacciones de $10M a $100M. Se aplican las tarifas estándar en los demás casos.",
+                agentBonusSummary: "Resumen de Bonos del Agente de Marketing",
+                copyAgentSummary: "Copiar Resumen del Agente de Marketing",
                 copied: "¡Copiado!",
-                initialAgentBonus: "Bono Inicial del Agente",
+                initialAgentBonus: "Bono Inicial del Agente de Marketing",
                 totalBonusUsd: "Bono Total (USD)",
                 totalNetBonus: "Bono Neto Total",
                 vsClientPurchase: "frente a la Compra del Cliente de",
                 clientPurchase: "Compra del Cliente",
-                agentBonus: "Bono del Agente",
+                agentBonus: "Bono del Agente de Marketing",
                 initialBonusBreakdown: "Desglose del Bono Inicial",
                 tier: "Nivel",
                 rate: "Tasa",
                 applicableAmount: "Monto Aplicable",
                 bonusEarned: "Bono Ganado",
-                agentStakingBonusTitle: "Bono Potencial de Staking para Agentes",
-                agentStakingBonusDesc: "Este bono adicional se paga por adelantado al agente si el cliente acepta un plazo de tenencia. El XRBG ganado por el agente es canjeable al finalizar el plazo del cliente.",
+                agentStakingBonusTitle: "Bono Potencial de Staking para Agentes de Marketing",
+                agentStakingBonusDesc: "Este bono adicional se paga por adelantado al agente de marketing si el cliente acepta un plazo de tenencia. El XRBG ganado por el agente de marketing es canjeable al finalizar el plazo del cliente.",
                 term: "Plazo",
                 clientApy: "APY del Cliente",
-                agentEarnsXrbg: "Agente Gana (XRBG)*",
-                agentEarnsUsd: "Agente Gana (USD)*",
-                agentStakingDisclaimer: "*Calculado a partir del rendimiento APY del cliente según el porcentaje de bono neto del agente.",
+                agentEarnsXrbg: "Agente de Marketing Gana (XRBG)*",
+                agentEarnsUsd: "Agente de Marketing Gana (USD)*",
+                agentStakingDisclaimer: "*Calculado a partir del rendimiento APY del cliente según el porcentaje de bono neto del agente de marketing.",
                 clientSummaryTitle: "Resumen de la Transacción del Cliente",
                 copyClientSummary: "Copiar Resumen del Cliente",
                 clientPurchaseAmount: "Monto de Compra de XRBG del Cliente (USD)",
@@ -192,8 +194,8 @@ s0.parentNode.insertBefore(s1,s0);
                 totalXrbg: "Total de XRBG",
                 totalValue: "Valor Total*",
                 clientStakingDisclaimer: "*El valor en USD es una estimación basada en el precio actual del oro y no refleja cambios futuros en el precio.",
-                footerDisclaimer: "Descargo de responsabilidad: Este sitio y la calculadora son solo para fines informativos y no constituyen una solicitud de inversión.",
-                footerNotice: "Aviso a los Agentes: Los tokens XRBG no se ofrecen con descuento. En su lugar, se acredita al agente un porcentaje de bonificación sobre el monto vendido en USD o XRBG, pagado como tarifa de marketing por una venta exitosa originada por ese agente. El comprador recibe del vendedor el monto total al contado de XRBG. El vendedor o el agente del vendedor enviará el pago a un solo agente designado por transacción. Si hay varios agentes involucrados por parte del comprador, deben designar un único pagador para recibir el pago del bono. Dicho pagador es el único responsable de la distribución posterior de los fondos a todos los demás agentes participantes.",
+                footerDisclaimer: "Descargo de responsabilidad: Este sitio y la calculadora son solo para fines informativos y no constituyen una solicitud de inversión. Cualquier oferta de APY listada es parte de un programa promocional, es temporal y puede ser reducida o cancelada en cualquier momento a discreción de XRB Gold.",
+                footerNotice: "Aviso a los Agentes de Marketing: Los tokens XRBG no se ofrecen con descuento. En su lugar, se acredita al agente de marketing un porcentaje de bonificación sobre el monto vendido en USD o XRBG, pagado como tarifa de marketing por una venta exitosa originada por ese agente de marketing. El comprador recibe del vendedor el monto total al contado de XRBG. El vendedor o el agente de marketing del vendedor enviará el pago a un solo agente de marketing designado por transacción. Si hay varios agentes de marketing involucrados por parte del comprador, deben designar un único pagador para recibir el pago del bono. Dicho pagador es el único responsable de la distribución posterior de los fondos a todos los demás agentes de marketing participantes.",
                 terms: "Términos y Condiciones",
                 privacy: "Política de Privacidad",
                 copyright: "© Legacy Vault Services S.T.C. B.V (Reg. No. 169064) / XRBG Trust (Reg. No. 169124) Registro Comercial de Curazao / XRB DAO. Todos los derechos reservados."
@@ -209,7 +211,8 @@ s0.parentNode.insertBefore(s1,s0);
           { upTo: Infinity, rate: 0.01, label: 'Amount over $100,000,000' }
         ];
 
-        const apyTiers = [
+        // Standard APY tiers
+        const baseApyTiers = [
             { term: 6, rate: 0.06, label: '6 Months' },
             { term: 12, rate: 0.12, label: '12 Months' },
             { term: 24, rate: 0.18, label: '24 Months' },
@@ -359,6 +362,24 @@ s0.parentNode.insertBefore(s1,s0);
           const currentSliderConfig = sliderConfig[mode];
           const chartData = calculationResult ? [ { percent: calculationResult.netBonusPercentage, color: '#16a34a' }, { percent: 1 - calculationResult.netBonusPercentage, color: '#E7AA0D' } ] : [];
 
+          // --- [NEW] Function to get dynamic APY based on transaction amount ---
+          const getDynamicApyTiers = (amount) => {
+              if (amount >= 1000000 && amount < 10000000) {
+                  return baseApyTiers.map(tier =>
+                      tier.term === 12 ? { ...tier, rate: 0.60 } : tier
+                  );
+              }
+              if (amount >= 10000000 && amount <= 100000000) {
+                  return baseApyTiers.map(tier =>
+                      tier.term === 12 ? { ...tier, rate: 1.20 } : tier
+                  );
+              }
+              // For amounts < $1M or > $100M, return standard rates.
+              return baseApyTiers;
+          };
+
+          const currentApyTiers = calculationResult ? getDynamicApyTiers(calculationResult.transactionValue) : baseApyTiers;
+
           const generateAgentText = () => {
               if (!calculationResult) return '';
               let text = `--- ${t.agentBonusSummary.toUpperCase()} ---\n\n`;
@@ -375,7 +396,7 @@ s0.parentNode.insertBefore(s1,s0);
 
               text += `${t.agentStakingBonusTitle}:\n`;
               text += `${t.agentStakingBonusDesc}\n\n`;
-              apyTiers.forEach(tier => {
+              currentApyTiers.forEach(tier => {
                   const years = tier.term / 12;
                   const clientXrbgEarned = calculationResult.totalGrams * tier.rate * years;
                   const agentXrbgEarned = clientXrbgEarned * calculationResult.netBonusPercentage;
@@ -399,7 +420,7 @@ s0.parentNode.insertBefore(s1,s0);
             text += `${t.redemptionInfoP2}\n\n`;
 
             text += `${t.clientStakingBonusTitle}:\n`;
-            apyTiers.forEach(tier => {
+            currentApyTiers.forEach(tier => {
                 const years = tier.term / 12;
                 const xrbgEarned = calculationResult.totalGrams * tier.rate * years;
                 const totalXrbg = calculationResult.totalGrams + xrbgEarned;
@@ -471,33 +492,38 @@ s0.parentNode.insertBefore(s1,s0);
                             </div>
                         </div>
 
+                        <div className="relative bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 rounded-md my-6" role="alert">
+                            <p className="font-bold">Promotional APY Notice</p>
+                            <p className="text-sm">{t.promoNotice}</p>
+                        </div>
+
                         {calculationResult && (
                           <div className="animate-fade-in mt-8 space-y-8">
                             {/* --- Agent Section --- */}
                             <div className="bg-black/5 rounded-xl divide-y-2 divide-black/10">
                               <div className="p-6">
                                   <div className="flex justify-between items-center mb-4">
-                                     <h3 className="text-xl font-semibold text-[#080708]">{t.agentBonusSummary}</h3>
-                                     <button onClick={() => copyToClipboard(generateAgentText(), 'agent')} className="bg-[#094074] text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-[#083a66] transition-all">{agentCopyText}</button>
+                                      <h3 className="text-xl font-semibold text-[#080708]">{t.agentBonusSummary}</h3>
+                                      <button onClick={() => copyToClipboard(generateAgentText(), 'agent')} className="bg-[#094074] text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-[#083a66] transition-all">{agentCopyText}</button>
                                   </div>
                                  <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                                     <div className="text-center space-y-4">
-                                        <p className="text-[#996515] text-sm -mb-2">{t.initialAgentBonus}</p>
-                                        <div>
-                                          <p className="text-[#996515] text-lg">{t.totalBonusUsd}</p>
-                                          <p className="text-4xl md:text-5xl font-extrabold text-green-600 tracking-tight">{formatCurrency(calculationResult.totalBonus)}</p>
-                                          <p className="text-[#996515] text-base -mt-1">{t.totalNetBonus}: <span className="font-bold">{(calculationResult.netBonusPercentage * 100).toFixed(2)}%</span></p>
-                                          <p className="text-xs text-[#996515]">{t.vsClientPurchase} {formatCurrency(calculationResult.transactionValue)}</p>
-                                        </div>
-                                     </div>
-                                     <div className="relative h-48 w-48 mx-auto">
+                                      <div className="text-center space-y-4">
+                                          <p className="text-[#996515] text-sm -mb-2">{t.initialAgentBonus}</p>
+                                          <div>
+                                            <p className="text-[#996515] text-lg">{t.totalBonusUsd}</p>
+                                            <p className="text-4xl md:text-5xl font-extrabold text-green-600 tracking-tight">{formatCurrency(calculationResult.totalBonus)}</p>
+                                            <p className="text-[#996515] text-base -mt-1">{t.totalNetBonus}: <span className="font-bold">{(calculationResult.netBonusPercentage * 100).toFixed(2)}%</span></p>
+                                            <p className="text-xs text-[#996515]">{t.vsClientPurchase} {formatCurrency(calculationResult.transactionValue)}</p>
+                                          </div>
+                                      </div>
+                                      <div className="relative h-48 w-48 mx-auto">
                                           <PieChart data={chartData} />
                                           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                                               <div className="flex items-center text-xs"><span className="w-3 h-3 rounded-full bg-[#E7AA0D] mr-2"></span>{t.clientPurchase}</div>
                                               <div className="flex items-center text-xs"><span className="w-3 h-3 rounded-full bg-green-600 mr-2"></span>{t.agentBonus}</div>
                                           </div>
-                                     </div>
-                                 </div>
+                                      </div>
+                                  </div>
                               </div>
                               <div className="p-6">
                                 <h3 className="text-xl font-semibold text-[#080708] mb-4 text-center">{t.initialBonusBreakdown}</h3>
@@ -514,70 +540,70 @@ s0.parentNode.insertBefore(s1,s0);
                                      <span className={`transform transition-transform duration-300 ${isAgentStakingBonusVisible ? 'rotate-180' : ''}`}>&#9660;</span>
                                  </button>
                                  <div className={`collapsible-content ${isAgentStakingBonusVisible ? 'expanded' : ''}`}>
-                                    <div className="pt-4">
-                                      <p className="text-[#996515] text-sm text-center mb-4">{t.agentStakingBonusDesc}</p>
-                                      <div className="overflow-x-auto">
-                                        <table className="w-full text-left">
-                                          <thead className="border-b-2 border-black/10"><tr className="text-[#996515]"><th className="p-2">{t.term}</th><th className="p-2 text-center">{t.clientApy}</th><th className="p-2 text-right">{t.agentEarnsXrbg}</th><th className="p-2 text-right">{t.agentEarnsUsd}</th></tr></thead>
-                                          <tbody>
-                                              {apyTiers.map((tier) => {
-                                                  const years = tier.term / 12; const clientXrbgEarned = calculationResult.totalGrams * tier.rate * years; const agentXrbgEarned = clientXrbgEarned * calculationResult.netBonusPercentage; const agentUsdEarned = agentXrbgEarned * goldPricePerGram;
-                                                  return ( <tr key={tier.term} className="border-b border-black/5 last:border-none"><td className="p-2 font-medium text-[#080708]">{tier.label}</td><td className="p-2 text-center text-[#094074] font-semibold">{(tier.rate * 100)}%</td><td className="p-2 text-right font-semibold text-green-600">+{formatNumber(agentXrbgEarned)}</td><td className="p-2 text-right font-semibold text-green-600">{formatCurrency(agentUsdEarned)}</td></tr> );
-                                              })}
-                                          </tbody>
-                                        </table>
-                                        <p className="text-xs text-[#996515] text-right mt-2">{t.agentStakingDisclaimer}</p>
-                                      </div>
-                                    </div>
+                                     <div className="pt-4">
+                                         <p className="text-[#996515] text-sm text-center mb-4">{t.agentStakingBonusDesc}</p>
+                                         <div className="overflow-x-auto">
+                                             <table className="w-full text-left">
+                                                 <thead className="border-b-2 border-black/10"><tr className="text-[#996515]"><th className="p-2">{t.term}</th><th className="p-2 text-center">{t.clientApy}</th><th className="p-2 text-right">{t.agentEarnsXrbg}</th><th className="p-2 text-right">{t.agentEarnsUsd}</th></tr></thead>
+                                                 <tbody>
+                                                     {currentApyTiers.map((tier) => {
+                                                         const years = tier.term / 12; const clientXrbgEarned = calculationResult.totalGrams * tier.rate * years; const agentXrbgEarned = clientXrbgEarned * calculationResult.netBonusPercentage; const agentUsdEarned = agentXrbgEarned * goldPricePerGram;
+                                                         return ( <tr key={tier.term} className="border-b border-black/5 last:border-none"><td className="p-2 font-medium text-[#080708]">{tier.label}</td><td className="p-2 text-center text-[#094074] font-semibold">{(tier.rate * 100)}%</td><td className="p-2 text-right font-semibold text-green-600">+{formatNumber(agentXrbgEarned)}</td><td className="p-2 text-right font-semibold text-green-600">{formatCurrency(agentUsdEarned)}</td></tr> );
+                                                     })}
+                                                 </tbody>
+                                             </table>
+                                             <p className="text-xs text-[#996515] text-right mt-2">{t.agentStakingDisclaimer}</p>
+                                         </div>
+                                     </div>
                                  </div>
                               </div>
                             </div>
 
                             {/* --- Client Section --- */}
                             <div className="bg-black/5 rounded-xl divide-y-2 divide-black/10">
-                              <div className="p-6">
-                                  <div className="flex justify-between items-center mb-4">
-                                      <h3 className="text-xl font-semibold text-[#080708]">{t.clientSummaryTitle}</h3>
-                                      <button onClick={() => copyToClipboard(generateClientText(), 'client')} className="bg-[#094074] text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-[#083a66] transition-all">{clientCopyText}</button>
-                                  </div>
-                                  <div className="text-center space-y-4 pt-4 border-t border-black/10">
-                                      <div>
-                                          <p className="text-[#996515] text-sm">{t.clientPurchaseAmount}</p>
-                                          <p className="text-3xl font-bold text-[#E7AA0D] tracking-tight mt-1">{formatCurrency(calculationResult.transactionValue)}</p>
-                                          <p className="text-xs text-[#996515] mt-1">{t.basedOnPrice} {formatCurrency(goldPricePerGram)} {t.perGram}</p>
-                                      </div>
-                                      <div className="pt-4 border-t border-black/10">
-                                           <p className="text-[#996515] text-sm">{t.clientReceives}</p>
-                                           <div className="grid grid-cols-2 gap-4 mt-2">
-                                              <div><p className="text-[#996515] text-sm">{t.xrbgTokens}</p><p className="text-2xl font-bold text-[#094074] tracking-tight mt-1">{formatNumber(calculationResult.totalGrams)}</p></div>
-                                              <div><p className="text-[#996515] text-sm">{t.equivalentGold}</p><p className="text-2xl font-bold text-[#094074] tracking-tight mt-1">{formatNumber(calculationResult.totalKilograms)} kg</p></div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className="p-6">
+                                <div className="p-6">
+                                    <div className="flex justify-between items-center mb-4">
+                                        <h3 className="text-xl font-semibold text-[#080708]">{t.clientSummaryTitle}</h3>
+                                        <button onClick={() => copyToClipboard(generateClientText(), 'client')} className="bg-[#094074] text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-[#083a66] transition-all">{clientCopyText}</button>
+                                    </div>
+                                    <div className="text-center space-y-4 pt-4 border-t border-black/10">
+                                        <div>
+                                            <p className="text-[#996515] text-sm">{t.clientPurchaseAmount}</p>
+                                            <p className="text-3xl font-bold text-[#E7AA0D] tracking-tight mt-1">{formatCurrency(calculationResult.transactionValue)}</p>
+                                            <p className="text-xs text-[#996515] mt-1">{t.basedOnPrice} {formatCurrency(goldPricePerGram)} {t.perGram}</p>
+                                        </div>
+                                        <div className="pt-4 border-t border-black/10">
+                                             <p className="text-[#996515] text-sm">{t.clientReceives}</p>
+                                             <div className="grid grid-cols-2 gap-4 mt-2">
+                                                 <div><p className="text-[#996515] text-sm">{t.xrbgTokens}</p><p className="text-2xl font-bold text-[#094074] tracking-tight mt-1">{formatNumber(calculationResult.totalGrams)}</p></div>
+                                                 <div><p className="text-[#996515] text-sm">{t.equivalentGold}</p><p className="text-2xl font-bold text-[#094074] tracking-tight mt-1">{formatNumber(calculationResult.totalKilograms)} kg</p></div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="p-6">
                                   <h3 className="text-xl font-semibold text-[#080708] mb-2 text-center">{t.redemptionInfoTitle}</h3>
                                   <p className="text-[#996515] text-sm text-center mb-4">
                                       {t.redemptionInfoP1}
                                       <br/><br/>
                                       {t.redemptionInfoP2}
                                   </p>
-                              </div>
-                              <div className="p-6">
-                                <h3 className="text-xl font-semibold text-[#080708] mb-2 text-center">{t.clientStakingBonusTitle}</h3>
-                                <div className="overflow-x-auto">
-                                  <table className="w-full text-left">
-                                    <thead className="border-b-2 border-black/10"><tr className="text-[#996515]"><th className="p-2">{t.term}</th><th className="p-2 text-center">APY</th><th className="p-2 text-right">{t.xrbgEarned}</th><th className="p-2 text-right">{t.bonusUsdValue}</th><th className="p-2 text-right">{t.totalXrbg}</th><th className="p-2 text-right">{t.totalValue}</th></tr></thead>
-                                    <tbody>
-                                        {apyTiers.map((tier) => {
-                                            const years = tier.term / 12; const xrbgEarned = calculationResult.totalGrams * tier.rate * years; const totalXrbg = calculationResult.totalGrams + xrbgEarned; const totalValue = totalXrbg * goldPricePerGram;
-                                            return ( <tr key={tier.term} className="border-b border-black/5 last:border-none"><td className="p-2 font-medium text-[#080708]">{tier.label}</td><td className="p-2 text-center text-[#094074] font-semibold">{(tier.rate * 100)}%</td><td className="p-2 text-right font-semibold text-[#094074]">{formatNumber(xrbgEarned)}</td><td className="p-2 text-right font-semibold text-[#094074]">{formatCurrency(xrbgEarned * goldPricePerGram)}</td><td className="p-2 text-right text-[#080708]">{formatNumber(totalXrbg)}</td><td className="p-2 text-right font-bold text-[#094074]">{formatCurrency(totalValue)}</td></tr> );
-                                        })}
-                                    </tbody>
-                                  </table>
-                                  <p className="text-xs text-[#996515] text-right mt-2">{t.clientStakingDisclaimer}</p>
                                 </div>
-                              </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-semibold text-[#080708] mb-2 text-center">{t.clientStakingBonusTitle}</h3>
+                                    <div className="overflow-x-auto">
+                                        <table className="w-full text-left">
+                                            <thead className="border-b-2 border-black/10"><tr className="text-[#996515]"><th className="p-2">{t.term}</th><th className="p-2 text-center">APY</th><th className="p-2 text-right">{t.xrbgEarned}</th><th className="p-2 text-right">{t.bonusUsdValue}</th><th className="p-2 text-right">{t.totalXrbg}</th><th className="p-2 text-right">{t.totalValue}</th></tr></thead>
+                                            <tbody>
+                                                {currentApyTiers.map((tier) => {
+                                                    const years = tier.term / 12; const xrbgEarned = calculationResult.totalGrams * tier.rate * years; const totalXrbg = calculationResult.totalGrams + xrbgEarned; const totalValue = totalXrbg * goldPricePerGram;
+                                                    return ( <tr key={tier.term} className="border-b border-black/5 last:border-none"><td className="p-2 font-medium text-[#080708]">{tier.label}</td><td className="p-2 text-center text-[#094074] font-semibold">{(tier.rate * 100)}%</td><td className="p-2 text-right font-semibold text-[#094074]">{formatNumber(xrbgEarned)}</td><td className="p-2 text-right font-semibold text-[#094074]">{formatCurrency(xrbgEarned * goldPricePerGram)}</td><td className="p-2 text-right text-[#080708]">{formatNumber(totalXrbg)}</td><td className="p-2 text-right font-bold text-[#094074]">{formatCurrency(totalValue)}</td></tr> );
+                                                })}
+                                            </tbody>
+                                        </table>
+                                        <p className="text-xs text-[#996515] text-right mt-2">{t.clientStakingDisclaimer}</p>
+                                    </div>
+                                </div>
                             </div>
                           </div>
                         )}
@@ -587,8 +613,8 @@ s0.parentNode.insertBefore(s1,s0);
               
               <footer className="w-full max-w-6xl mt-8 text-center text-[#996515] text-xs p-4">
                 <div className="border-t border-black/10 pt-6 space-y-4">
-                    <p><strong>{t.footerDisclaimer.split(':')[0]}:</strong>{t.footerDisclaimer.split(':')[1]}</p>
-                    <p><strong>{t.footerNotice.split(':')[0]}:</strong>{t.footerNotice.split(':')[1]}</p>
+                    <p><strong>{t.footerDisclaimer.split(':')[0]}:</strong>{t.footerDisclaimer.split(':').slice(1).join(':')}</p>
+                    <p><strong>{t.footerNotice.split(':')[0]}:</strong>{t.footerNotice.split(':').slice(1).join(':')}</p>
                     <div className="flex justify-center gap-x-4"><a href="https://whitepaper.xrb.gold/legal/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-[#E7AA0D]">{t.terms}</a><span>|</span><a href="https://whitepaper.xrb.gold/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-[#E7AA0D]">{t.privacy}</a></div>
                     <p className="pt-2">{t.copyright}</p>
                 </div>
